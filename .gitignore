@@ -6,6 +6,7 @@
 
 node_modules/
 !*.js
+!*.html
 !package.json
 !.git*
 !dist/**/*

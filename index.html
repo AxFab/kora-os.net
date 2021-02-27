@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Fabien Bavent">
+
+    <link rel="canonical" href="http://kora.org/">
+
+    <title>Kora Project</title>
+    <link rel="stylesheet" href="/dist/css/bootstrap-4.6.0.min.css">
+    <link rel="stylesheet" href="/dist/css/fontawesome-5.12.1.min.css">
+    <link rel="stylesheet" href="/dist/css/fonts-Lato.latin.css">
+    <link rel="stylesheet" href="/dist/css/kora-theme.css">
+    <link rel="stylesheet" href="/dist/css/flag-icon.min.css">
+  </head>
+  <body>
+
+    <!-- Navigation bar -->
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-sw-color">
+      <div class="container">
+
+        <div class="navbar-translate">
+          <a class="navbar-brand text-switch" href="/">Kora OS</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item"><a class="nav-link text-switch" href="#/" jaks-i18n="menu.home">Home</a></li>
+            <!-- <li class="nav-item"><a class="nav-link text-switch" href="#/news" jaks-i18n="menu.news">News</a></li> -->
+            <!-- <li class="nav-item"><a class="nav-link text-switch" href="#/forum">Forum</a></li> -->
+
+            <li class="dropdown nav-item">
+              <a href="#" class="dropdown-toggle nav-link text-switch" data-toggle="dropdown">
+                <i class="fas fa-user"></i>
+              </a>
+              <div class="dropdown-menu dropdown-with-icons">
+                <a href="#" class="dropdown-item" id="btn-login" jaks-i18n="menu.login">Login</a>
+                <a href="#" class="dropdown-item" id="btn-lang" jaks-i18n="menu.lang">Language</a>
+                <!-- <a href="#" class="dropdown-item" id="btn-lang">Documentation</a> -->
+              </div>
+            </li>
+
+            <!-- <li class="button-container nav-item iframe-extern">
+              <a href="#" class="btn btn-orange btn-round btn-block">
+                <i class="fas fa-download"></i> Download
+              </a>
+            </li> -->
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="section section-header">
+      <div class="header-wrapper">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-8 text-center">
+              <h1 class="text-white h1">Kora OS</h1>
+              <p class="lead text-white">Hobbist operating system. Designed to keep basic things simple.</p>
+            </div>
+          </div>
+        </div>
+
+        <figure class="bg-figure-bottom d-none d-md-block">
+          <svg fill="white" enable-background="new 0 0 1504 131.3" viewBox="0 0 1504 131.3" xmlns="http://www.w3.org/2000/svg">
+            <path d="m877.8 85c139.5 24.4 348 33.5 632.2-48.2-.2 32.5-.3 65-.5 97.4-505.9 0-1011.6 0-1517.5 0 0-33.3 0-66.7 0-100.1 54.2-11.4 129.5-23.9 220-28.2 91-4.3 173.6 1 307.4 18.6 183.2 24.2 295.2 49.4 358.4 60.5z"></path>
+          </svg>
+        </figure>
+      </div><!-- header-wrapper -->
+
+    </section>
+
+
+    <div class="page-wrapper">
+
+      <!-- Home page -->
+      <section class="section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h2 class="display-4">Hobbist operating system</h2>
+            </div>
+            <div class="col-md-4">
+              <p class="lead">Some years ago, I started a crazy project. I decided to start writing my own kernel. At the time I didn't have much knowledge of such system so I start learning a lot about system and hardware principes. I already had strong skills in software development but this project really improve my knowledge and allow me to re-learn everything from a different point of view.</p>
+            </div>
+            <div class="col-md-4">
+              <p class="lead">My OS is still a young pup and I need more time to try some of the countless ideas I have. That's all the fun to create a raw system, everything looks possible...</p>
+              <!-- <a class="btn btn-orange btn-lg" href="#" role="button">Learn more</a> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Home page -->
+      <section class="section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4" jaks="page" jaks-provider="/user">
+		    <div>
+		    <p class="lead">{{ login }} </p>
+		    <img :src="{avatar}" class="img-thumbnail circle" />
+		    </div>
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+            </div>
+	  </div>
+	</div>
+      </section>
+
+
+    </div><!-- page-wrapper -->
+
+    <footer class="container">
+      <div class="row">
+        <div class="col-md-3">
+        </div>
+      </div>
+    </footer>
+
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal-login">
+      <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" jaks-i18n="menu.login">Login</h4>
+            <div class="text-center mt-2">
+              <a href="/github/handshake" class="icon text-light"><i class="fab fa-github"></i></a>
+              <a href="#" class="icon text-light"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="modal-body text-center">
+            <form class="form">
+              <p class="text-xmuted">Or Be Classical</p>
+              <div class="form-group mb-5">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="fas fa-user"></i>
+                    </span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="First Name...">
+                </div>
+              </div>
+              <div class="form-group mb-5">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="fas fa-envelope"></i>
+                    </span>
+                  </div>
+                  <input type="mail" class="form-control" placeholder="Email...">
+                </div>
+              </div>
+              <div class="form-group mb-5">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="fas fa-lock"></i>
+                    </span>
+                  </div>
+                  <input type="password" class="form-control" placeholder="Password...">
+                </div>
+              </div>
+
+              <a type="button" class="text-orange text-smallcaps">Let's go</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal-lang">
+      <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" jaks-i18n="menu.lang">Languages</h4>
+          </div>
+          <div class="modal-body text-center">
+            <a href="#" class="btn btn-block btn-info" id="btn-lang-fr"><i class="flag-icon flag-icon-fr"></i> Français</a>
+            <a href="#" class="btn btn-block btn-info" id="btn-lang-gb"><i class="flag-icon flag-icon-gb"></i> English</a>
+            <a href="#" class="btn btn-block btn-info" id="btn-lang-es"><i class="flag-icon flag-icon-es"></i> Español</a>
+            <a href="#" class="btn btn-block btn-info" id="btn-lang-ru"><i class="flag-icon flag-icon-ru"></i> русский</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="/dist/js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="/dist/js/bootstrap-4.6.0.min.js"></script>
+    <script type="text/javascript" src="/dist/js/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="/dist/js/marked.min.js"></script>
+    <script type="text/javascript" src="/dist/js/jaks-1.0.0.js"></script>
+
+    <script type="text/javascript">
+
+window.onscroll = function (ev) {
+  if (window.pageYOffset > 100) {
+    $('nav.navbar').removeClass('navbar-sw-color')
+    $('nav.navbar').addClass('navbar-sw-white')
+  } else {
+    $('nav.navbar').addClass('navbar-sw-color')
+    $('nav.navbar').removeClass('navbar-sw-white')
+  }
+}
+
+$(() => {
+  $('#btn-login').click(_ => $('#modal-login').modal('show'))
+  $('#btn-lang').click(_ => $('#modal-lang').modal('show'))
+  $('#btn-lang-fr').click(_ => { jaks.setLanguage('fr'); $('#modal-lang').modal('hide'); })
+  $('#btn-lang-gb').click(_ => { jaks.setLanguage('en'); $('#modal-lang').modal('hide'); })
+  $('#btn-lang-es').click(_ => { jaks.setLanguage('es'); $('#modal-lang').modal('hide'); })
+  $('#btn-lang-ru').click(_ => { jaks.setLanguage('ru'); $('#modal-lang').modal('hide'); })
+})
+
+    </script>
+  </body>
+</html>
