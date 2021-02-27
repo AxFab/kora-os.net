@@ -1,0 +1,17 @@
+{
+  "name": "kora-os",
+  "version": "1.0.0",
+  "description": "KoraOs website",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Fabien Bavent <fabien.bavent@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "expediate": "0.0.1",
+    "serve-static": "^1.14.1"
+  }
+}
